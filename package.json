@@ -1,0 +1,53 @@
+{
+  "name": "react-mui-input-search-debounce",
+  "version": "1.0.0",
+  "description": "Componente de búsqueda con autocompletado, selectores y enrutamiento, construido con MUI y React Router.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=17.0.0",
+    "react-dom": ">=17.0.0",
+    "@mui/material": ">=5.0.0",
+    "@mui/icons-material": ">=5.0.0",
+    "@emotion/react": ">=11.0.0",
+    "@emotion/styled": ">=11.0.0",
+    "react-router-dom": ">=6.0.0"
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.8",
+    "@mui/material": "^7.3.6",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-router-dom": "^7.10.1",
+    "typescript": "^5.9.3"
+  },
+  "keywords": [
+    "react",
+    "mui",
+    "search",
+    "autocomplete",
+    "router",
+    "debounce"
+  ],
+  "author": "BlackyCoder",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SamitoX4/react-mui-input-search-debounce"
+  },
+  "bugs": {
+    "url": "https://github.com/SamitoX4/react-mui-input-search-debounce/issues"
+  },
+  "homepage": "https://github.com/SamitoX4/react-mui-input-search-debounce#readme"
+}

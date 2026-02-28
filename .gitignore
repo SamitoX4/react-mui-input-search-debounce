@@ -1,0 +1,100 @@
+# Dependencias
+node_modules/
+package-lock.json
+yarn.lock
+.pnpm-store/
+
+# Directorios de compilación / distribución
+dist
+dist/
+build/
+lib/
+out/
+esm/
+cjs/
+*.tsbuildinfo
+
+# Archivos generados por el empaquetado de npm
+*.tgz
+*.tar
+*.tar.gz
+package-lock.json  # (opcional: si quieres ignorar el lock en librerías, mantenlo comentado)
+yarn.lock          # (similar, muchas librerías sí versionan el lock)
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Entorno y archivos de configuración local
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+.env.test
+.npmrc
+.yarnrc
+.prettierrc  # (excluye solo si no quieres compartir config; normalmente se versiona)
+.eslintrc    # (normalmente se versiona, pero puedes excluirlo si es personal)
+
+# Tests y cobertura
+coverage/
+.nyc_output/
+jest.config.js  # (normalmente versionado, pero si es local, exclúyelo)
+jest.setup.js
+*.test.js
+*.spec.js
+*.test.ts
+*.spec.ts
+*.test.tsx
+*.spec.tsx
+__tests__/
+__mocks__/
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+
+# IDEs y editores
+.vscode/          # (comentar si quieres compartir configuraciones de VSCode)
+.idea/
+*.sublime-*
+.project
+.classpath
+
+# Otros archivos temporales o de caché
+.eslintcache
+.cache/
+.temp/
+tmp/
+
+# TypeScript – archivos compilados en el directorio fuente (si no usas carpeta dist)
+# Descomenta la siguiente línea si mezclas .ts y .js en la misma carpeta
+# *.js
+# *.js.map
+# *.d.ts
+
+# React (Create React App / Vite / etc.)
+/build
+/public/build
+/storybook-static
+
+# Entornos de desarrollo local
+.history/
+.vercel
+.netlify
+
+# Archivos de documentación generados
+docs/
+apidoc/
+typedoc/
+
+# Paquete npm – archivos que no deben publicarse en el repositorio pero sí en npm
+# (el package.json define "files", lo que se incluye en el paquete)

@@ -1,0 +1,28 @@
+name: Publicar en npm
+
+on:
+  push:
+    branches: [ npm ]    # o 'master', según tu rama principal
+  release:
+    types: [ created ]      # también se puede disparar al crear un release
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'          # o la versión que necesites
+          registry-url: 'https://registry.npmjs.org/'
+
+      - name: Instalar dependencias
+        run: npm install                    # usa package-lock.json para instalar versiones exactas
+
+      - name: Publicar en npm
+        run: npm publish --access public   # quita --access public si es un paquete privado
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}   # token de npm configurado en los secretos
