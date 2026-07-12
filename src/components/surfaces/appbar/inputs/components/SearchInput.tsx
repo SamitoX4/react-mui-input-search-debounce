@@ -149,6 +149,7 @@ const InputSearch: FC<InputSearchProps> = ({
           // Si hay texto, la etiqueta se oculta (shrink=false) para que no flote.
           label={inputValue ? "" : labelText}
           slotProps={{
+            ...params.slotProps,
             input: {
               ...params.slotProps.input,
               endAdornment: (
