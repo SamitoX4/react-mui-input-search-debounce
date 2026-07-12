@@ -1,6 +1,6 @@
 {
   "name": "react-mui-input-search-debounce",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Componente de búsqueda con autocompletado, selectores y enrutamiento, construido con MUI y React Router.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
