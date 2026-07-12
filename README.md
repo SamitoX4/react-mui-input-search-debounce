@@ -1,5 +1,7 @@
 # 🔍 react-mui-input-search-debounce
 
+[![npm version](https://badge.fury.io/js/react-mui-menu-button.svg)](https://www.npmjs.com/package/react-mui-menu-button)
+
 Search component with autocomplete, category selector, and routing,
 built with **Material-UI (MUI)** and **React Router**. Includes debounce
 to optimize requests and supports light/dark themes.
