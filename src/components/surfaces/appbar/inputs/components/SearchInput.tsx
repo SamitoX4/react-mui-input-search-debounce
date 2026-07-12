@@ -148,38 +148,38 @@ const InputSearch: FC<InputSearchProps> = ({
           {...params}
           // Si hay texto, la etiqueta se oculta (shrink=false) para que no flote.
           label={inputValue ? "" : labelText}
-          InputLabelProps={{
-            shrink: false,
-            sx: getInputLabelStyles(theme), // Estilos personalizados para la etiqueta
-          }}
-          sx={getTextFieldRootStyles(theme)}
-          InputProps={{
-            ...params.InputProps,
-            // Adorno final: contiene el selector de categorías (si aplica) y el botón de búsqueda.
-            endAdornment: (
-              <>
-                {loading ? (
-                  <CircularProgress color="inherit" size={20} />
-                ) : null}
-                <InputAdornment position="end">
-                  {/* El selector solo aparece si hay más de un elemento en menuItems.
-                      El primer elemento suele ser "Todo el contenido" (búsqueda general). */}
-                  {menuItems.length >= 2 && (
-                    <SearchSelect
-                      selectedValue={selectedValue}
-                      onChange={handleChange}
-                      menuItems={menuItems}
+          slotProps={{
+            input: {
+              ...params.slotProps.input,
+              endAdornment: (
+                <>
+                  {loading ? (
+                    <CircularProgress color="inherit" size={20} />
+                  ) : null}
+                  <InputAdornment position="end">
+                    {menuItems.length >= 2 && (
+                      <SearchSelect
+                        selectedValue={selectedValue}
+                        onChange={handleChange}
+                        menuItems={menuItems}
+                        inputValue={inputValue}
+                      />
+                    )}
+                    <SearchButton
+                      onClick={handleSearchClick}
                       inputValue={inputValue}
                     />
-                  )}
-                  <SearchButton
-                    onClick={handleSearchClick}
-                    inputValue={inputValue}
-                  />
-                </InputAdornment>
-              </>
-            ),
+                  </InputAdornment>
+                </>
+              ),
+            },
+            inputLabel: {
+              ...params.slotProps.inputLabel,
+              shrink: false,
+              sx: getInputLabelStyles(theme),
+            },
           }}
+          sx={getTextFieldRootStyles(theme)}
         />
       )}
     />
